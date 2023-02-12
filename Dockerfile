@@ -4,6 +4,6 @@ RUN mkdir /usr/src/app
 
 WORKDIR /usr/src/app
 
-RUN npm install -g @angular/cli
+RUN rm -rf node_modules && npm install -g @angular/cli
 
 COPY . .
