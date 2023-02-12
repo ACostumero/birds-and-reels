@@ -1,13 +1,9 @@
 FROM node:18.14.0
 
-WORKDIR /app
+RUN mkdir /usr/src/app
 
-COPY package.json ./
+WORKDIR /usr/src/app
 
-RUN npm install
+RUN npm install -g @angular/cli
 
 COPY . .
-
-EXPOSE 4200
-
-CMD npm start

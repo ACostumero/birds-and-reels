@@ -1,10 +1,12 @@
-version: "2"
-services:
-  devapp:
-    image: birds-and-reels
-    build: .
-    ports:
-      - "8080:4200"
-    volumes:
-        - "/app/node_modules"
-        - ".:/app"
+version: '3.5' # We use version 3.5 syntax
+services: # Here we define our service(s)
+    app: # The name of the service
+      image: birds-and-reels
+      container_name: birds-and-reels-app # Container name
+      build: . # Location of our Dockerfile
+      volumes: # Volume binding
+        - '.:/usr/src/app'
+      ports:
+        - '4200:4200' # Port mapping
+      command: >
+        bash -c "npm install && ng serve --host 0.0.0.0 --port 4200"
