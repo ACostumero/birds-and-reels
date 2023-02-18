@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './container/layout.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
-import { MaterialModule } from '@app-shared/modules/material.module';
 import { SidenavRightComponent } from './components/sidenav-right/sidenav-right.component';
 import { SidenavLeftComponent } from './components/sidenav-left/sidenav-left.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SharedModule } from "@app-shared/modules/shared.module";
 
 
 @NgModule({
@@ -20,9 +20,9 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     CommonModule,
     LayoutRoutingModule,
-    MaterialModule,
+    SharedModule,
   ],
-  exports: [MaterialModule]
+  exports: [SharedModule]
 })
 export class LayoutModule {
 }
