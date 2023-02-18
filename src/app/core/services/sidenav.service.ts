@@ -16,13 +16,23 @@ export class SidenavService {
   public userMenuToggle$: Observable<boolean> = this._userMenuToggleSource.asObservable();
 
   public toggleAppMenu() {
-    this._isUserMenuOpened = false;
+    this._closeUserMenu();
     this._isAppMenuOpened = !this._isAppMenuOpened;
     this._appMenuToggleSource.next(this._isAppMenuOpened)
   }
 
-  public toggleUserMenu() {
+  private _closeAppMenu() {
     this._isAppMenuOpened = false;
+    this._appMenuToggleSource.next(this._isAppMenuOpened);
+  }
+
+  private _closeUserMenu() {
+    this._isUserMenuOpened = false;
+    this._userMenuToggleSource.next(this._isUserMenuOpened)
+  }
+
+  public toggleUserMenu() {
+    this._closeAppMenu();
     this._isUserMenuOpened = !this._isUserMenuOpened;
     this._userMenuToggleSource.next(this._isUserMenuOpened)
   }
