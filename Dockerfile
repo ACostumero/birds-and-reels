@@ -1,9 +1,13 @@
 FROM node:18.14.0
 
-RUN mkdir /usr/src/app
+RUN mkdir -p /app
 
-WORKDIR /usr/src/app
+RUN npm install -g @angular/cli --save
 
-RUN rm -rf node_modules && npm install -g @angular/cli
+WORKDIR /app
 
-COPY . .
+COPY package.json /app
+
+RUN npm install --save
+
+COPY . /app
