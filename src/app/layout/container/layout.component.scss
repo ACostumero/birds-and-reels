@@ -1,0 +1,35 @@
+$block: 'layout';
+
+.#{$block} {
+  display: flex;
+  flex-flow: row wrap;
+  height: 100vh;
+
+  mat-sidenav-container.mat-sidenav-container {
+    width: 100vw;
+  }
+
+  &__header {
+    height: 64px; // TODO: Add variable
+    flex-grow: 1;
+  }
+
+  &__nav {
+    flex: 0 1 20vw;
+  }
+
+  &__main {
+    flex: 1;
+    height: calc(100vh - (64px * 2));
+    overflow: auto;
+  }
+
+  &__sidebar-right {
+    flex: 0 1 20vw;
+  }
+
+  &__footer {
+    height: 64px;
+    flex: 0 1 100%;
+  }
+}
