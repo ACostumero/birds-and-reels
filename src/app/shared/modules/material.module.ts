@@ -6,12 +6,10 @@ import { MatIconModule, MatIconRegistry } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatListModule } from "@angular/material/list";
-import { IconModule } from "@app-shared/modules/icon.module";
 
 
 const modules = [
   CommonModule,
-  IconModule,
   MatSlideToggleModule,
   MatToolbarModule,
   MatIconModule,

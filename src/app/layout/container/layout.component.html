@@ -1,6 +1,6 @@
 <div class="layout">
   <header class="layout__header">
-    <app-toolbar (appMenuToggle)="toggleAppMenu()" (userMenuToggle)="toggleUserMenu()"></app-toolbar>
+    <app-header (appMenuToggle)="toggleAppMenu()" (userMenuToggle)="toggleUserMenu()"></app-header>
   </header>
   <mat-sidenav-container (backdropClick)="closeByBackdrop()">
     <mat-sidenav mode="over" (keydown.escape)="toggleAppMenu()" [opened]="appMenuToggle$ | async" style="width: 300px">
