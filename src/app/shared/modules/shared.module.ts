@@ -4,6 +4,7 @@ import { CardComponent } from "@app-shared/components/card/card.component";
 import { MaterialModule } from "@app-shared/modules/material.module";
 import { HttpClientModule } from "@angular/common/http";
 import { UiKitModule } from "@app-shared/modules/ui-kit.module";
+import { IconModule } from "@app-shared/modules/icon.module";
 
 const components = [
   CardComponent
@@ -15,12 +16,14 @@ const components = [
     CommonModule,
     MaterialModule,
     UiKitModule,
+    IconModule,
     HttpClientModule
   ],
   exports: [
     components,
     MaterialModule,
-    UiKitModule
+    UiKitModule,
+    IconModule,
   ]
 })
 export class SharedModule { }

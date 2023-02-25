@@ -1,15 +1,16 @@
 <div class="toolbar-container">
+
   <app-toolbar class="toolbar-container__toolbar">
     <button mat-icon-button (click)="toggleAppMenu()">
-      <mat-icon svgIcon="menu"></mat-icon>
+      <app-svg-icon [name]="'menu-burger-horizontal'"></app-svg-icon>
     </button>
     <span>Birds and reels</span>
     <span class="toolbar-container__toolbar--center-spacer"></span>
     <button mat-icon-button>
-      <mat-icon svgIcon="heart-rounded"></mat-icon>
+      <app-svg-icon [name]="'heart'"></app-svg-icon>
     </button>
     <button mat-icon-button (click)="toggleUserMenu()">
-      <mat-icon svgIcon="image-user"></mat-icon>
+      <app-svg-icon [name]="'profile'"></app-svg-icon>
     </button>
   </app-toolbar>
 </div>
