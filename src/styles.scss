@@ -1,14 +1,8 @@
-@use '@angular/material' as mat;
 @use 'main';
-@include mat.core();
-
 $theme: main.$app-theme;
-
 .dark-mode {
   $theme: main.$app-dark-theme;
 }
-
-@include mat.all-component-themes(main.$app-theme);
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
