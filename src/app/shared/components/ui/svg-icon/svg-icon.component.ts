@@ -1,9 +1,10 @@
-import { Component, Input, OnDestroy } from '@angular/core';
+import { Component, Input, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { IconRegistry } from "@app-core/utils/icon-registry";
 import { CommonModule } from "@angular/common";
 import { DomSanitizer, SafeHtml } from "@angular/platform-browser";
 import { HttpClient } from "@angular/common/http";
 import { map, Observable, Subject, switchMap, takeUntil, tap } from "rxjs";
+import { Color } from "@app-core/types/color.type";
 
 @Component({
   selector: 'app-svg-icon',
@@ -12,7 +13,8 @@ import { map, Observable, Subject, switchMap, takeUntil, tap } from "rxjs";
     CommonModule
   ],
   templateUrl: './svg-icon.component.html',
-  styleUrls: ['./svg-icon.component.scss']
+  styleUrls: ['./svg-icon.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class SvgIconComponent implements OnDestroy {
   private _destroySubscriptions$: Subject<void> = new Subject<void>();
@@ -25,6 +27,7 @@ export class SvgIconComponent implements OnDestroy {
   private readonly DEFAULT_SIZE = 24;
 
   @Input() size: number = this.DEFAULT_SIZE;
+  @Input() fill?: Color;
 
   @Input()
   set name(iconName: string) {
