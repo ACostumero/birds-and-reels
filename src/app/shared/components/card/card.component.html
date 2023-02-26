@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card__background">
+    <img class="card__background--image" [src]="bird.image" alt="">
+  </div>
+  <div class="card__header">
+    <app-svg-icon [name]="'heart'" [size]="24" [fill]="'#f7909e'" [color]="'#f7909e'"></app-svg-icon>
+  </div>
+  <div class="card__content">
+    <h3 class="card__content--title">{{ bird.name }}</h3>
+    <p class="card__content--detail">{{ bird.scientificName }}</p>
+  </div>
+</div>
