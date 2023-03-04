@@ -1,8 +1,8 @@
 version: '3.5' # We use version 3.5 syntax
 services: # Here we define our service(s)
     app: # The name of the service
-      image: birds-and-reels
-      container_name: birds-and-reels-app # Container name
+      image: hyrule-tiles
+      container_name: hyrule-tiles-app # Container name
       build: . # Location of our Dockerfile
       volumes: # Volume binding
         - '.:/app'
