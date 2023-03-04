@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { SidenavService } from "@app-core/services/sidenav.service";
-import { Bird } from "@app-core/interfaces/bird.interface";
 
 @Component({
   selector: 'app-layout',
@@ -12,7 +11,7 @@ export class LayoutComponent {
   public readonly userMenuToggle$ = this._sidenavService.userMenuToggle$;
 
   // TODO: REMOVE, FOR TESTING PURPOSES ONLY
-  public readonly birdsMock: Bird[] = [
+  public readonly birdsMock: any[] = [
     {
       id: '1',
       name: 'Petirrojo Europeo',

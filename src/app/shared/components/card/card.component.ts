@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Bird } from "@app-core/interfaces/bird.interface";
 
 @Component({
   selector: 'app-card',
@@ -8,6 +7,6 @@ import { Bird } from "@app-core/interfaces/bird.interface";
 })
 export class CardComponent {
 
-  @Input() bird!: Bird;
+  @Input() bird!: any;
 
 }
