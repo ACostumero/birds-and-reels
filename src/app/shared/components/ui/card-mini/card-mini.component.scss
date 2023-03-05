@@ -1,0 +1,11 @@
+$block: 'card-mini';
+
+.#{$block} {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 36px;
+  width: 120px;
+  height: 120px;
+  background: #baffe378;
+}
