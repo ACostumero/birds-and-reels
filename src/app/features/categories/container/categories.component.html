@@ -1,1 +1,8 @@
-<p>categories works!</p>
+<div class="categories">
+  <h2>Categories:</h2>
+  <div class="categories__wrapper">
+    <ng-container *ngFor="let category of categories$ | async">
+      <app-card-mini [iconName]="category" [routerLink]="['../category', category]"></app-card-mini>
+    </ng-container>
+  </div>
+</div>

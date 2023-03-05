@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { TEntry } from "@app-core/types/segment.type";
+import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +10,8 @@ export class ApiService {
 
   constructor(private readonly _http: HttpClient) {}
 
-  public get(segment: string) {
-    return this._http.get(`${ApiService.API_BASE_URL}${this._encodeSegment(segment)}`);
+  public get<T>(segment: string): Observable<T> {
+    return this._http.get<T>(`${ApiService.API_BASE_URL}${this._encodeSegment(segment)}`);
   }
 
   private _encodeSegment(segment: string) {

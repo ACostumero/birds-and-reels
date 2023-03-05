@@ -1,4 +1,4 @@
-export const enum CATEGORY {
+export enum CATEGORY {
   CREATURE = 'creatures',
   EQUIPMENT = 'equipment',
   MATERIALS = 'materials',

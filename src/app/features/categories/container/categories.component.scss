@@ -1,0 +1,13 @@
+$block: 'categories';
+
+.#{$block} {
+  display: flex;
+  flex-direction: column;
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}

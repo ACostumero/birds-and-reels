@@ -1,1 +1,7 @@
-<p>category works!</p>
+<div class="category">
+  <pre>{{ categorySource$ | async | json }}</pre>
+  <h2>Category: {{ category$ | async | json}}</h2>
+  <div class="category__cards">
+    <app-card *ngFor="let item of items$ | async" [cardInfo]="item"></app-card>
+  </div>
+</div>
