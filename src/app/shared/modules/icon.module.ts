@@ -12,17 +12,22 @@ export class IconModule {
   private readonly _iconsPath: string = "../../../assets/icons/";
 
   private readonly _icons = [
+    "creatures",
+    "equipment",
     "heart",
+    "materials",
     "menu-burger-horizontal",
     "menu-kebab",
     "mode-dark",
     "mode-light",
+    "monsters",
     "notification",
     "options",
     "profile",
     "question-mark-circle",
     "search",
-    "sign-times-circle"
+    "sign-times-circle",
+    "treasure"
   ]
 
   constructor(public iconRegistry: IconRegistry) {

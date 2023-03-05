@@ -13,12 +13,11 @@
     <mat-sidenav-content>
 
       <main class="layout__main">
-        <div class="test-cards" style="display:flex; gap: 24px; flex-wrap: wrap; padding: 20px">
-          <app-card *ngFor="let bird of birdsMock" [bird]="bird"></app-card>
-        </div>
         <router-outlet></router-outlet>
       </main>
-      <footer class="layout__footer"></footer>
+      <footer class="layout__footer">
+        <app-footer></app-footer>
+      </footer>
     </mat-sidenav-content>
   </mat-sidenav-container>
 
