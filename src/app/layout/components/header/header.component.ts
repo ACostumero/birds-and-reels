@@ -1,5 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { appName } from "@app-core/constants/env.const";
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,15 +6,4 @@ import { appName } from "@app-core/constants/env.const";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-
-  public readonly appName = appName;
-
-  @Output() userMenuToggle: EventEmitter<void> = new EventEmitter<void>();
-
-  constructor() {
-  }
-
-  public toggleUserMenu() {
-    this.userMenuToggle.emit();
-  }
 }

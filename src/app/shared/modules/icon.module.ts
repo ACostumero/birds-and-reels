@@ -14,22 +14,23 @@ export class IconModule {
   private readonly _icons = [
     "arrow-left",
     "arrow-right",
-    "creatures",
-    "equipment",
+    "bug",
+    "carrot",
+    "chest",
     "heart",
-    "materials",
     "menu-burger-horizontal",
     "menu-kebab",
     "mode-dark",
     "mode-light",
-    "monsters",
     "notification",
     "options",
     "profile",
     "question-mark-circle",
     "search",
     "sign-times-circle",
-    "treasure"
+    "skull",
+    "sword",
+    "zelda"
   ]
 
   constructor(public iconRegistry: IconRegistry) {

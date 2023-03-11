@@ -5,22 +5,15 @@ $block: 'layout';
   flex-flow: row wrap;
   height: 100vh;
 
-  &__header {
-    display: flex;
-    justify-content: center;
-    height: 48px; // TODO: Add variable
-    flex-grow: 1;
-  }
-
   &__nav {
     flex: 0 1 60px;
-    height: calc(100vh - (48px * 2));
+    height: calc(100vh - 48px);
   }
 
   &__main {
     flex: 1;
-    // Calculate height: (ViewportHeight - (headerHeight + footerHeight) - (verticalPadding))
-    height: calc(100vh - (48px * 2) - (24px * 2)); // TODO: Create variables
+    // Calculate height: (ViewportHeight - footerHeight - (verticalPadding))
+    height: calc(100vh - 48px - (24px * 2)); // TODO: Create variables
     overflow: auto;
     padding: 24px 40px;
   }
