@@ -12,6 +12,8 @@ export class IconModule {
   private readonly _iconsPath: string = "../../../assets/icons/";
 
   private readonly _icons = [
+    "arrow-left",
+    "arrow-right",
     "creatures",
     "equipment",
     "heart",
