@@ -4,6 +4,12 @@ $block: 'category';
   display: flex;
   flex-direction: column;
   overflow: hidden;
+
+  &__title {
+    margin-top: 0;
+    text-transform: capitalize;
+  }
+
   &__cards {
     display: flex;
     flex-wrap: wrap;

@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CategoryFacade } from "@app-features/categories/facades/category.facade";
 import { CATEGORY } from "@app-core/enums/category.enum";
-import { map, Observable, of } from "rxjs";
-import { ActivatedRoute } from "@angular/router";
+import { filter, map, Observable, of, Subject, takeUntil, tap } from "rxjs";
+import { ActivatedRoute, ParamMap } from "@angular/router";
 import { TCategory } from "@app-core/types/category.type";
 
 @Component({
@@ -10,17 +10,31 @@ import { TCategory } from "@app-core/types/category.type";
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.scss'],
 })
-export class CategoryComponent {
-
+export class CategoryComponent implements OnInit, OnDestroy {
   public category$: Observable<CATEGORY | null> = of(null);
-  public categorySource$: Observable<CATEGORY> = this._categoryFacade._categorySource;
-  items$: Observable<TCategory[]> = of([]);
-  constructor(private readonly _categoryFacade: CategoryFacade,private route: ActivatedRoute) {
-    this.items$ = this.route.data.pipe(map(data => {
-      return data['items'] as TCategory[]
-    }));
-
+  public items$: Observable<TCategory[]>;
+  private _destroySubscriptions$: Subject<void> = new Subject<void>();
+  constructor(
+    private readonly _categoryFacade: CategoryFacade,
+    private route: ActivatedRoute
+  ) {
     this.category$ = this._categoryFacade.category$;
+    this.items$ = this._categoryFacade.items$;
+  }
+
+  ngOnInit() {
+    this.route.paramMap.pipe(
+      takeUntil(this._destroySubscriptions$),
+      map((params: ParamMap) => params.get('name')),
+      filter(Boolean),
+      tap((category) => {
+        this._categoryFacade.setCategory(category as CATEGORY)
+      })
+    ).subscribe();
+  }
+
+  ngOnDestroy() {
+    this._destroySubscriptions$.next();
   }
 
 }

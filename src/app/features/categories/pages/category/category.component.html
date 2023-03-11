@@ -1,6 +1,5 @@
 <div class="category">
-  <pre>{{ categorySource$ | async | json }}</pre>
-  <h2>Category: {{ category$ | async | json}}</h2>
+  <h1 class="category__title">{{ category$ | async }}</h1>
   <div class="category__cards">
     <app-card *ngFor="let item of items$ | async" [cardInfo]="item"></app-card>
   </div>
