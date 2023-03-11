@@ -1,2 +1,7 @@
-<button>
+<button *ngIf="icon"
+        class="ui-icon-button"
+        [ngStyle]="{'height.px': size, 'width.px': size}">
+  <span class="ui-icon-button--icon-wrapper">
+    <app-svg-icon [name]="icon"></app-svg-icon>
+  </span>
 </button>

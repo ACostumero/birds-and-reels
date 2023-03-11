@@ -1,10 +1,7 @@
-<nav class="layout__nav">
-  <mat-nav-list>
-    <a mat-list-item [routerLink]="'/accounts'">Accounts </a>
-    <a mat-list-item [routerLink]="'/create-account'">Create Account </a>
-    <a mat-list-item [routerLink]="'/contacts'">Contacts </a>
-    <a mat-list-item [routerLink]="'/create-contact'">Create Contact </a>
-    <a mat-list-item [routerLink]="'/activities'">Activities </a>
-    <a mat-list-item [routerLink]="'/create-activity'">Create Activity </a>
-  </mat-nav-list>
-</nav>
+<div class="navigation">
+  <div class="navigation--button-wrapper" [routerLink]="'../category/creatures'" [routerLinkActive]="'selected'"><app-icon-button [icon]="'creatures'"></app-icon-button></div>
+  <div class="navigation--button-wrapper" [routerLink]="'../category/equipment'" [routerLinkActive]="'selected'"><app-icon-button [icon]="'equipment'"></app-icon-button></div>
+  <div class="navigation--button-wrapper" [routerLink]="'../category/materials'" [routerLinkActive]="'selected'"><app-icon-button [icon]="'materials'"></app-icon-button></div>
+  <div class="navigation--button-wrapper" [routerLink]="'../category/monsters'" [routerLinkActive]="'selected'"><app-icon-button [icon]="'monsters'"></app-icon-button></div>
+  <div class="navigation--button-wrapper" [routerLink]="'../category/treasure'" [routerLinkActive]="'selected'"><app-icon-button [icon]="'treasure'"></app-icon-button></div>
+</div>

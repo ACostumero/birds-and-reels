@@ -1,25 +1,21 @@
 <div class="layout">
   <header class="layout__header">
-    <app-header (appMenuToggle)="toggleAppMenu()" (userMenuToggle)="toggleUserMenu()"></app-header>
+    <app-header (userMenuToggle)="toggleUserMenu()"></app-header>
   </header>
-  <mat-sidenav-container (backdropClick)="closeByBackdrop()">
-    <mat-sidenav mode="over" (keydown.escape)="toggleAppMenu()" [opened]="appMenuToggle$ | async" style="width: 300px">
-      <app-sidenav-left></app-sidenav-left>
-    </mat-sidenav>
-    <mat-sidenav mode="over" (keydown.escape)="toggleUserMenu()" position="end" [opened]="userMenuToggle$ | async"
-                 style="width: 300px">
-      <app-sidenav-right></app-sidenav-right>
-    </mat-sidenav>
-    <mat-sidenav-content>
 
-      <main class="layout__main">
-        <router-outlet></router-outlet>
-      </main>
-      <footer class="layout__footer">
-        <app-footer></app-footer>
-      </footer>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+  <nav class="layout__nav">
+    <app-sidenav-left></app-sidenav-left>
+  </nav>
 
+  <main class="layout__main">
+    <router-outlet></router-outlet>
+  </main>
 
+  <aside class="layout__aside">
+    <app-sidenav-right></app-sidenav-right>
+  </aside>
+
+  <footer class="layout__footer">
+    <app-footer></app-footer>
+  </footer>
 </div>

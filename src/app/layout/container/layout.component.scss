@@ -5,17 +5,16 @@ $block: 'layout';
   flex-flow: row wrap;
   height: 100vh;
 
-  mat-sidenav-container.mat-sidenav-container {
-    width: 100vw;
-  }
-
   &__header {
+    display: flex;
+    justify-content: center;
     height: 48px; // TODO: Add variable
     flex-grow: 1;
   }
 
   &__nav {
-    flex: 0 1 20vw;
+    flex: 0 1 60px;
+    height: calc(100vh - (48px * 2));
   }
 
   &__main {
@@ -26,7 +25,7 @@ $block: 'layout';
     padding: 24px 40px;
   }
 
-  &__sidebar-right {
+  &__aside {
     flex: 0 1 20vw;
   }
 

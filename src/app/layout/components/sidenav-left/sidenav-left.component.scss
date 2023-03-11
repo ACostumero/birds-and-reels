@@ -1,0 +1,15 @@
+$block: 'navigation';
+
+.#{$block} {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #baffe378;
+
+  &--button-wrapper {
+    &.selected {
+        background: pink;
+    }
+  }
+
+}

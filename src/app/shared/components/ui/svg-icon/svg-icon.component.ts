@@ -28,7 +28,7 @@ export class SvgIconComponent implements OnDestroy {
 
   @Input() size: number = this.DEFAULT_SIZE;
   @Input() fill?: Color;
-  @Input() color?: Color;
+  @Input() color?: Color = '#23bb7c';
 
   @Input()
   set name(iconName: string) {

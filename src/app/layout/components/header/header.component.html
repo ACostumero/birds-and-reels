@@ -1,16 +1,7 @@
-<div class="toolbar-container">
-
-  <app-toolbar class="toolbar-container__toolbar">
-    <button mat-icon-button (click)="toggleAppMenu()">
-      <app-svg-icon [name]="'menu-burger-horizontal'"></app-svg-icon>
-    </button>
-    <span>Hyrule Tiles</span>
-    <span class="toolbar-container__toolbar--center-spacer"></span>
-    <button mat-icon-button>
-      <app-svg-icon [name]="'notification'"></app-svg-icon>
-    </button>
-    <button mat-icon-button (click)="toggleUserMenu()">
-      <app-svg-icon [name]="'profile'"></app-svg-icon>
-    </button>
+<div class="header">
+  <app-toolbar class="header__toolbar">
+    <span>{{ appName }}</span>
+    <span class="header__toolbar--center-spacer"></span>
+    <app-icon-button [icon]="'profile'"></app-icon-button>
   </app-toolbar>
 </div>
