@@ -1,0 +1,31 @@
+@use 'abstracts/animations';
+@use 'abstracts/mixins';
+
+$block: 'spinner-ui';
+
+.#{$block} {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  animation: loading 1.2s infinite;
+
+  &__spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: spin 1.5s infinite;
+
+    &--icon {
+      position: relative;
+      bottom: 8px;
+    }
+
+  }
+
+}
+
+
+
+
