@@ -7,6 +7,7 @@ import { CardMiniComponent } from "@app-shared/components/ui/card-mini/card-mini
 import { SharedModule } from "@app-shared/modules/shared.module";
 import { CategoriesFacade } from "@app-features/categories/facades/categories.facade";
 import { CategoryFacade } from "@app-features/categories/facades/category.facade";
+import { SpinnerComponent } from "@app-shared/components/ui/spinner/spinner.component";
 
 
 
@@ -15,12 +16,13 @@ import { CategoryFacade } from "@app-features/categories/facades/category.facade
     CategoriesComponent,
     CategoryComponent
   ],
-  imports: [
-    CommonModule,
-    CategoriesRoutingModule,
-    CardMiniComponent,
-    SharedModule,
-  ],
+    imports: [
+        CommonModule,
+        CategoriesRoutingModule,
+        CardMiniComponent,
+        SharedModule,
+        SpinnerComponent,
+    ],
   providers: [
     CategoriesFacade,
     CategoryFacade,

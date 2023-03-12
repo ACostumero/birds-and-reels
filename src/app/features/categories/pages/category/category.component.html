@@ -1,6 +1,15 @@
-<div class="category">
-  <h1 class="category__title">{{ category$ | async }}</h1>
-  <div class="category__cards">
-    <app-card *ngFor="let item of items$ | async" [cardInfo]="item"></app-card>
-  </div>
+<div class="category" *ngIf="(items$ | async) as items">
+
+  <ng-container *ngIf="items.length else spinner">
+    <h1 class="category__title">{{ category$ | async }}</h1>
+    <div class="category__cards">
+      <app-card *ngFor="let item of items" [cardInfo]="item"></app-card>
+    </div>
+  </ng-container>
+
+  <ng-template #spinner>
+    <app-spinner></app-spinner>
+  </ng-template>
 </div>
+
+

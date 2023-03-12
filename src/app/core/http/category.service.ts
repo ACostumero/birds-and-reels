@@ -15,9 +15,7 @@ export class CategoryService {
   get(category: CATEGORY) {
     const segment: string = `category/${category}`
     return this._apiService.get<TCategoryResponse>(segment).pipe(
-      map((res: TCategoryResponse) => {
-        return this._getCategoryResponse(res);
-      }),
+      map((res: TCategoryResponse) => this._getCategoryResponse(res))
     );
   }
 
