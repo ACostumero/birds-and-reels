@@ -1,14 +1,15 @@
+@use "abstracts/colors";
 $block: 'navigation';
 
 .#{$block} {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: #baffe378;
+  background: colors.$primary-lighter-color;
 
   &--button-wrapper {
-    &.selected {
-        background: pink;
+    &.active {
+      background: colors.$primary-color;
     }
   }
 

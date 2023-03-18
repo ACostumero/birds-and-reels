@@ -2,11 +2,9 @@
   <div class="card__background">
     <img class="card__background--image" [src]="cardInfo.image" alt="">
   </div>
-  <div class="card__header">
-    <app-svg-icon [name]="'heart'" [size]="24" [fill]="'#f7909e'" [color]="'#f7909e'"></app-svg-icon>
-  </div>
   <div class="card__content">
-    <h3 class="card__content--title">{{ cardInfo.name }}</h3>
-    <p class="card__content--detail">{{ cardInfo.category }}</p>
+    <h2 class="card__content--title">{{ cardInfo.name }}</h2>
+<!--    <app-icon-button class="card__content&#45;&#45;fav" [color]="'#fff'" [icon]="'heart'"></app-icon-button>-->
+<!--    <p class="card__content&#45;&#45;detail">{{ cardInfo.category }}</p>-->
   </div>
 </div>

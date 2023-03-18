@@ -1,3 +1,4 @@
+@use "abstracts/colors";
 $block: 'card-mini-ui';
 
 .#{$block} {
@@ -7,5 +8,5 @@ $block: 'card-mini-ui';
   border-radius: 36px;
   width: 120px;
   height: 120px;
-  background: #baffe378;
+  background: colors.$primary-lighter-color;
 }

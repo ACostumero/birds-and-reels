@@ -1,19 +1,37 @@
+@use "abstracts/colors";
+
 $block: 'category';
 
 .#{$block} {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-
+  align-items: center;
+  gap: 24px;
   &__title {
-    margin-top: 0;
-    text-transform: capitalize;
+    font-family: montserrat-black-italic;
+    text-transform: uppercase;
+    position: relative;
+    color:  colors.$text-inverted-color;
+    &:after {
+      content: '\00a0';
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 60vw;
+      padding-block: 10px;
+      transform: skew(40deg, 0) translate(-48%, -10px);
+      background: rgb(35, 187, 124);
+      top: 0;
+      left: 50%;
+      z-index: -1;
+    }
   }
 
   &__cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 24px 36px;
     justify-content: center;
     align-items: flex-start;
   }

@@ -1,3 +1,4 @@
+@use "abstracts/colors";
 $block: 'ui-icon-button';
 
 .#{$block} {
@@ -30,7 +31,7 @@ $block: 'ui-icon-button';
       position: absolute;
       width: 100%;
       height: 100%;
-      background: #23bb7c;
+      background: colors.$primary-color;
       opacity: .2;
       border-radius: 50%;
       z-index: 0;

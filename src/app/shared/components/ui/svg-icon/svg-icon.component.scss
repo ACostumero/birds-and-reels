@@ -1,6 +1,6 @@
 $block: 'svg-icon-ui';
 .#{$block} {
-  display: inline-block;
+  display: flex;
   user-select: none;
   fill: none;
   svg {

@@ -10,6 +10,7 @@ $block: 'spinner-ui';
   align-items: center;
   margin-top: 80px;
   animation: loading 1.2s infinite;
+  padding: 20px;
 
   &__spinner {
     display: flex;

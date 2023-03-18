@@ -1,7 +1,8 @@
 <button *ngIf="icon"
+        (click)="emitClick($event)"
         class="ui-icon-button"
-        [ngStyle]="{'height.px': size, 'width.px': size}">
+        [ngStyle]="{'height.px': buttonSize, 'width.px': buttonSize}">
   <span class="ui-icon-button--icon-wrapper">
-    <app-svg-icon [name]="icon"></app-svg-icon>
+    <app-svg-icon [name]="icon" [color]="color" [fill]="fill" [size]="size"></app-svg-icon>
   </span>
 </button>
