@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { appName } from "@app-core/constants/env.const";
+import { APP_NAME } from "@app-core/constants/env.const";
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,5 @@ import { appName } from "@app-core/constants/env.const";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = appName;
+  title = APP_NAME;
 }
