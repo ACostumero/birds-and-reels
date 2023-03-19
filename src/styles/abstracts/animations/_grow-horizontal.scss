@@ -1,0 +1,11 @@
+@use "abstracts/mixins/animate";
+
+@include animate.keyframes(grow-horizontal) {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 60vw;
+  }
+}

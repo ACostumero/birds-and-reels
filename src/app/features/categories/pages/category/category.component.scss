@@ -1,3 +1,4 @@
+@use "abstracts/animations";
 @use "abstracts/colors";
 
 $block: 'category';
@@ -9,10 +10,10 @@ $block: 'category';
   align-items: center;
   gap: 24px;
   &__title {
-    font-family: montserrat-black-italic;
     text-transform: uppercase;
     position: relative;
-    color:  colors.$text-inverted-color;
+    color: colors.$text-inverted-color;
+    transition: all .3s;
     &:after {
       content: '\00a0';
       display: block;
@@ -25,6 +26,7 @@ $block: 'category';
       top: 0;
       left: 50%;
       z-index: -1;
+      animation: .3s grow-horizontal cubic-bezier(0.755, 0.050, 0.855, 0.060);
     }
   }
 

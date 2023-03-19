@@ -1,0 +1,12 @@
+@use "abstracts/mixins/animate";
+
+@include animate.keyframes(highlighter) {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+    left:0;
+    right:auto;
+  }
+}

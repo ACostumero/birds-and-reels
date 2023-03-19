@@ -1,4 +1,6 @@
-@keyframes spin {
+@use "abstracts/mixins/animate";
+
+@include animate.keyframes(spin) {
   0% {
     transform: rotate(0);
     animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -11,3 +13,4 @@
     transform: rotate(720deg);
   }
 }
+

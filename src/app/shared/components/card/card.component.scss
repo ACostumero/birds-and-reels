@@ -1,3 +1,4 @@
+@use "abstracts/animations";
 @use "abstracts/colors";
 $block: 'card';
 
@@ -27,7 +28,7 @@ $block: 'card';
     }
     .#{$block}__content {
       &:before {
-        animation: .3s in-out forwards;
+        animation: .3s highlighter forwards;
         transform: skew(30deg, 0) translateX(-30%);
       }
     }
@@ -66,7 +67,6 @@ $block: 'card';
       padding: 0 18px;
       text-transform: uppercase;
       flex: 1 1 100%;
-      font-family: 'montserrat-black-italic';
     }
     &--detail {
       margin-top: 0;
@@ -75,16 +75,5 @@ $block: 'card';
     &--fav {
       margin-top: 0;
     }
-  }
-}
-
-@keyframes in-out {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 90%;
-    left:0;
-    right:auto;
   }
 }
