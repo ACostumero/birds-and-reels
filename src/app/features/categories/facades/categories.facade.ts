@@ -1,15 +1,15 @@
 import { Injectable } from "@angular/core";
-import { CATEGORY } from "@app-core/enums/category.enum";
-import { enumToValues } from "@app-core/utils/enums";
 import { Observable, of } from "rxjs";
+import {CATEGORY_ROUTES} from "@app-core/constants/navigation.const";
+import {NavRoute} from "@app-core/interfaces/nav-route.interface";
 
 @Injectable()
 export class CategoriesFacade {
 
-  public readonly categories$: Observable<CATEGORY[]>;
+  public readonly categories$: Observable<NavRoute[]>;
 
   constructor() {
-    this.categories$ = of(enumToValues(CATEGORY));
+    this.categories$ = of(CATEGORY_ROUTES);
   }
 
 }
