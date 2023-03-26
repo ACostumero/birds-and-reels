@@ -1,16 +1,14 @@
 import { Injectable } from "@angular/core";
 import { CATEGORY } from "@app-core/enums/category.enum";
 import {
-  filter,
-  map,
   Observable, ReplaySubject,
   startWith,
   Subject,
   switchMap,
   takeUntil,
 } from "rxjs";
-import { TCategory } from "@app-core/types/category.type";
 import { CategoryService } from "@app-core/http/category.service";
+import {TEntry} from "@app-core/types/entry.type";
 
 @Injectable()
 export class CategoryFacade {
@@ -24,26 +22,24 @@ export class CategoryFacade {
   private readonly _categorySource: ReplaySubject<CATEGORY> = new ReplaySubject<CATEGORY>(1);
   public readonly category$: Observable<CATEGORY> = this._categorySource.asObservable();
 
-  public readonly items$: Observable<TCategory[]>;
+  public readonly items$: Observable<TEntry[]>;
 
   constructor(private readonly _categoryService: CategoryService) {
     this.items$ = this.category$.pipe(
       takeUntil(this._destroySubscriptions$),
-      filter(Boolean),
-      switchMap((category: CATEGORY) => this.getItems(category)),
+      switchMap((category: CATEGORY) => this._getItems(category))
     );
+  }
+
+  private _getItems(category: CATEGORY): Observable<TEntry[]> {
+    return this._categoryService.get(category).pipe(
+      takeUntil(this._destroySubscriptions$),
+      startWith([]) // Reset items before get news
+    )
   }
 
   public setCategory(value: CATEGORY) {
     this._categorySource.next(value);
-  }
-
-  public getItems(category: CATEGORY): Observable<TCategory[]> {
-    return this._categoryService.get(category).pipe(
-      takeUntil(this._destroySubscriptions$),
-      startWith([]),
-      map((items: TCategory[]) => items),
-      )
   }
 
   public onDestroy() {

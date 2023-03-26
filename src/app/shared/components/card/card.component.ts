@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { TCategory } from "@app-core/types/category.type";
+import {TEntry} from "@app-core/types/entry.type";
 
 @Component({
   selector: 'app-card',
@@ -8,10 +8,10 @@ import { TCategory } from "@app-core/types/category.type";
 })
 export class CardComponent {
 
-  private _cardInfo?: TCategory;
+  private _cardInfo?: TEntry;
 
   @Input()
-  set cardInfo(info: TCategory | undefined) {
+  set cardInfo(info: TEntry | undefined) {
     this._cardInfo = info;
   }
   get cardInfo() {
