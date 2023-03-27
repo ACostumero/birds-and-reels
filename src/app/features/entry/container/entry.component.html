@@ -1,1 +1,10 @@
-<p>entry works!</p>
+<div class="entry" *ngIf="(entry$ | async) as entry">
+  <ng-container *ngIf="entry else spinner">
+    <h1 class="category__name">{{ entry.name }}</h1>
+    <span class="category__description">{{ entry.description }}</span>
+  </ng-container>
+  <ng-template #spinner>
+    <app-spinner></app-spinner>
+  </ng-template>
+</div>
+

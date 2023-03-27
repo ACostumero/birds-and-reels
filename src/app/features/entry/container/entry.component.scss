@@ -1,0 +1,9 @@
+$block: 'entry';
+
+.#{$block} {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  gap: 24px;
+}
