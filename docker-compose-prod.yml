@@ -2,4 +2,4 @@ version: '3.5'
 services:
   app:
     command: >
-      bash -c "ng build && http-server dist/hyrule-tiles"
+      bash -c "npm run start-prod"

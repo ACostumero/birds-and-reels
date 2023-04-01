@@ -56,7 +56,12 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "optimization": {
+                "fonts": false,
+                "scripts": true,
+                "styles": true
+              }
             },
             "development": {
               "buildOptimizer": false,
@@ -71,6 +76,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "host": "0.0.0.0"
+          },
           "configurations": {
             "production": {
               "browserTarget": "HyruleTiles:build:production"
