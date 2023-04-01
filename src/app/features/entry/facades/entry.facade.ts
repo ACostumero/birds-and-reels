@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, filter, Observable, of, ReplaySubject, startWith, Subject, switchMap, takeUntil } from "rxjs";
 import {TEntry, TEntryId} from "@app-core/types/entry.type";
-import {EntryService} from "@app-core/http/entry.service";
+import {EntryService} from "@app-features/entry/services/entry.service";
 
 @Injectable()
 export class EntryFacade {

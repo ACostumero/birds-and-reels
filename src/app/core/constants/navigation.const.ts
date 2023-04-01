@@ -3,27 +3,27 @@ import {NavRoute} from "@app-core/interfaces/nav-route.interface";
 export const CATEGORY_ROUTES: NavRoute[] = [
   {
     name: 'creatures',
-    path: '../category/creatures',
+    path: 'category/creatures',
     icon: 'bug'
   },
   {
     name: 'equipment',
-    path: '../category/equipment',
+    path: 'category/equipment',
     icon: 'sword'
   },
   {
     name: 'materials',
-    path: '../category/materials',
+    path: 'category/materials',
     icon: 'carrot'
   },
   {
     name: 'monsters',
-    path: '../category/monsters',
+    path: 'category/monsters',
     icon: 'skull'
   },
   {
     name: 'treasure',
-    path: '../category/treasure',
+    path: 'category/treasure',
     icon: 'chest'
   },
 ]

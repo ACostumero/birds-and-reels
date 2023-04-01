@@ -7,7 +7,7 @@ import {
   switchMap,
   takeUntil,
 } from "rxjs";
-import { CategoryService } from "@app-core/http/category.service";
+import { CategoryService } from "@app-features/categories/services/category.service";
 import {TEntry} from "@app-core/types/entry.type";
 
 @Injectable()
