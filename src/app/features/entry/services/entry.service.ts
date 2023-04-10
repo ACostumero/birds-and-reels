@@ -13,7 +13,6 @@ export class EntryService {
   public get(entry: TEntryId): Observable<TEntry> {
     const segment: string = `entry/${entry}`
     return this._apiService.get<TEntryResponse>(segment).pipe(
-      delay(2000),
       map((response: TEntryResponse) => response.data));
   }
 

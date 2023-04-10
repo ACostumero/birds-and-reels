@@ -1,5 +1,5 @@
 <div class="navigation">
-  <ng-container *ngFor="let navRoute of NAV_ROUTES">
+  <ng-container *ngFor="let navRoute of NAVBAR_ROUTES">
     <div class="navigation--button-wrapper"
          [routerLink]="navRoute.path" #rla="routerLinkActive" [routerLinkActive]="ACTIVE_ROUTE_CLASS">
       <app-icon-button [color]="rla.isActive ? THEME.lightPrimary : THEME.primary " (buttonClick)="checkButtonClick($event)" [icon]="navRoute.icon"></app-icon-button>
