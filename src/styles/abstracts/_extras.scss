@@ -1,0 +1,21 @@
+@use "abstracts/colors";
+
+.animated-title {
+  position: relative;
+  color: colors.$text-inverted-color;
+  transition: all .3s;
+  &:after {
+    content: '\00a0';
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 60vw;
+    padding-block: 10px;
+    transform: skew(40deg, 0) translate(-48%, -10px);
+    background: colors.$primary-color;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    animation: .3s grow-horizontal cubic-bezier(0.755, 0.050, 0.855, 0.060);
+  }
+}

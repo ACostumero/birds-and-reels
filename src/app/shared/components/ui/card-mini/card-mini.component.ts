@@ -11,7 +11,9 @@ import { SvgIconComponent } from "@app-shared/components/ui/svg-icon/svg-icon.co
 })
 export class CardMiniComponent {
 
-  @Input() title?: string;
-  @Input() iconName?: string;
+  public readonly ICON_SIZE = 26;
+
+  @Input() title: string = '';
+  @Input() iconName: string = '';
 
 }

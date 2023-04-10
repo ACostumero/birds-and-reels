@@ -17,6 +17,7 @@ export class IconModule {
     "bug",
     "carrot",
     "chest",
+    "fragmented-sword",
     "heart",
     "menu-burger-horizontal",
     "menu-kebab",

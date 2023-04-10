@@ -1,4 +1,6 @@
 <div class="card-mini-ui">
-  <h4 *ngIf="title">{{ title }}</h4>
-  <app-svg-icon *ngIf="iconName" [name]="iconName" [size]="80"></app-svg-icon>
+  <div class="card-mini-ui__wrapper">
+    <app-svg-icon [name]="iconName" [size]="ICON_SIZE"></app-svg-icon>
+    <h4 class="card-mini-ui__wrapper--title">{{ title }}</h4>
+  </div>
 </div>

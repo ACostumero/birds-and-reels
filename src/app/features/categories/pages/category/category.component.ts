@@ -3,7 +3,8 @@ import { CategoryFacade } from "@app-features/categories/facades/category.facade
 import { CATEGORY } from "@app-core/enums/category.enum";
 import { filter, map, Observable, Subject, takeUntil, tap } from "rxjs";
 import { ActivatedRoute, ParamMap } from "@angular/router";
-import {TEntry} from "@app-core/types/entry.type";
+import { TEntry, TEntryId } from "@app-core/types/entry.type";
+import { RouterService } from "@app-core/services/router.service";
 
 @Component({
   selector: 'app-category',
@@ -18,7 +19,8 @@ export class CategoryComponent implements  OnInit, OnDestroy {
 
   constructor(
     private readonly _categoryFacade: CategoryFacade,
-    private readonly _activatedRoute: ActivatedRoute
+    private readonly _activatedRoute: ActivatedRoute,
+    private readonly _routerService: RouterService,
   ) { }
 
   ngOnInit() {
@@ -30,6 +32,10 @@ export class CategoryComponent implements  OnInit, OnDestroy {
         this._categoryFacade.setCategory(category as CATEGORY)
       })
     ).subscribe();
+  }
+
+  public openEntry(id: TEntryId) {
+    this._routerService.openEntry(id);
   }
 
   ngOnDestroy() {

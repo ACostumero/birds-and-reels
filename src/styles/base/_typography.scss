@@ -49,8 +49,9 @@ $font-family-light: 'montserrat-light';
 
 
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: $font-family-black-italic;
+  text-transform: uppercase;
 }
 
 

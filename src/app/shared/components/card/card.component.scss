@@ -59,21 +59,13 @@ $block: 'card';
       position: absolute;
       width: 0;
       height: 70%;
-      background: rgb(35, 187, 124);
+      background: colors.$primary-color;
       transition: all .3s;
       z-index: -1;
     }
     &--title {
       padding: 0 18px;
-      text-transform: uppercase;
       flex: 1 1 100%;
-    }
-    &--detail {
-      margin-top: 0;
-    }
-
-    &--fav {
-      margin-top: 0;
     }
   }
 }

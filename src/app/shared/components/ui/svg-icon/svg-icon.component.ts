@@ -5,6 +5,7 @@ import { DomSanitizer, SafeHtml } from "@angular/platform-browser";
 import { HttpClient } from "@angular/common/http";
 import { map, Observable, Subject, switchMap, takeUntil, tap } from "rxjs";
 import { Color } from "@app-core/types/color.type";
+import { MOUNTAIN_MEADOW } from "@app-core/constants/theme.const";
 
 @Component({
   selector: 'app-svg-icon',
@@ -26,9 +27,9 @@ export class SvgIconComponent implements OnDestroy {
 
   private readonly DEFAULT_SIZE = 24;
 
-  @Input() size: number = this.DEFAULT_SIZE;
+  @Input() size?: number | 'auto' = this.DEFAULT_SIZE;
   @Input() fill?: Color;
-  @Input() color?: Color = '#23bb7c';
+  @Input() color?: Color = MOUNTAIN_MEADOW;
 
   @Input()
   set name(iconName: string) {

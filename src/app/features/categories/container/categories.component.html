@@ -1,8 +1,8 @@
 <div class="categories">
-  <h1 class="categories__title">Categories</h1>
+  <h1 class="animated-title">Categories</h1>
   <div class="categories__wrapper">
     <ng-container *ngFor="let category of categories$ | async">
-      <app-card-mini [iconName]="category.icon" [routerLink]="'/' + category.path"></app-card-mini>
+      <app-card-mini [title]="category.name" [iconName]="category.icon" [routerLink]="category.path"></app-card-mini>
     </ng-container>
   </div>
 </div>
