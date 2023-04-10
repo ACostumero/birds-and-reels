@@ -1,6 +1,6 @@
 import { CATEGORY } from "@app-core/enums/category.enum";
 
-export interface CommonAttributes {
+export interface CommonEntry {
   id: number;
   category: CATEGORY;
   image: string;

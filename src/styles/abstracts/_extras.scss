@@ -2,6 +2,7 @@
 
 .animated-title {
   position: relative;
+  text-align: center;
   color: colors.$text-inverted-color;
   transition: all .3s;
   &:after {

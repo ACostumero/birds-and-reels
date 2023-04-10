@@ -1,7 +1,44 @@
 <div class="entry">
   <ng-container *ngIf="(entry$ | async) as entry else spinner">
-    <h1 class="category__name">{{ entry.name }}</h1>
-    <span class="category__description">{{ entry.description }}</span>
+    <h1 class="animated-title">{{ entry.name }}</h1>
+    <div class="entry__container">
+      <div class="entry__container--image">
+        <img class="entry__container--image" [src]="entry.image" alt="entry image">
+      </div>
+      <div class="entry__container--content">
+        <div class="entry-property">
+          <h3>Description</h3>
+          <p>{{entry.description}}</p>
+        </div>
+        <div class="entry-property">
+          <h3>Common locations</h3>
+          <p>{{ entry.common_locations }}</p>
+        </div>
+        <div class="entry-property" *ngIf="entry.hasCookingEffect()">
+          <h3>Cooking effect</h3>
+          <p>{{ entry.cooking_effect}}</p>
+        </div>
+        <div class="entry-property entry-group" *ngIf="entry.canAttack() || entry.canDefend()">
+          <div><h3>Attack</h3>
+            <p>{{ entry.attack }}</p></div>
+          <div><h3>Defense</h3>
+            <p>{{ entry.defense }}</p></div>
+
+
+        </div>
+        <div class="entry-property" *ngIf="entry.hasDrops()">
+          <h3>Drops</h3>
+          <p>{{ entry.drops }}</p>
+        </div>
+        <div class="entry-property" *ngIf="entry.canRecoverHearts()">
+          <h3>Recovered Hearts</h3>
+          <p>{{ entry.hearts_recovered }}</p>
+        </div>
+      </div>
+    </div>
+
+<!--    <pre style="margin: auto; width: 70vw">{{ entry | json }}</pre>-->
+
   </ng-container>
   <ng-template #spinner>
     <app-spinner></app-spinner>
