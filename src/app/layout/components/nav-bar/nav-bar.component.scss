@@ -1,15 +1,14 @@
-@use "abstracts/colors";
 $block: 'navigation';
 
 .#{$block} {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: colors.$primary-lighter-color;
+  background: var(--primary-color);
 
   &--button-wrapper {
     &.active {
-      background: colors.$primary-color;
+      background: var(--primary-accent-color);
     }
   }
 

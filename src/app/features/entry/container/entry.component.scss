@@ -9,7 +9,7 @@ $block: 'entry';
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
 
     &--image {

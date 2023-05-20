@@ -5,7 +5,7 @@ import { DomSanitizer, SafeHtml } from "@angular/platform-browser";
 import { HttpClient } from "@angular/common/http";
 import { map, Observable, Subject, switchMap, takeUntil, tap } from "rxjs";
 import { Color } from "@app-core/types/color.type";
-import { MOUNTAIN_MEADOW } from "@app-core/constants/theme.const";
+import {ThemeService} from "@app-core/services/theme.service";
 
 @Component({
   selector: 'app-svg-icon',
@@ -29,7 +29,7 @@ export class SvgIconComponent implements OnDestroy {
 
   @Input() size?: number | 'auto' = this.DEFAULT_SIZE;
   @Input() fill?: Color;
-  @Input() color?: Color = MOUNTAIN_MEADOW;
+  @Input() color?: Color = this._themeService.getColor('primary-color');
 
   @Input()
   set name(iconName: string) {
@@ -41,6 +41,7 @@ export class SvgIconComponent implements OnDestroy {
   constructor(
     private readonly _iconRegistry: IconRegistry,
     private readonly _httpClient: HttpClient,
+    private readonly _themeService: ThemeService,
     private readonly _sanitizer: DomSanitizer) {
     this.iconUrl$.pipe(
       takeUntil(this._destroySubscriptions$),

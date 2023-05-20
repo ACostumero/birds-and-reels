@@ -11,16 +11,19 @@ body {
 }
 
 :root {
-  --primary-color: main.$primary-color;
-  --primary-lighter-color: main.$primary-lighter-color;
-  --text-color: main.$text-color;
-  --text-inverted-color: main.$text-inverted-color;
+  --primary-color: #{main.$primary-color};
+  --primary-lighter-color: #{main.$primary-lighter-color};
+  --primary-darker-color: #{main.$primary-darker-color};
+  --primary-accent-color: #{main.$primary-accent-color};
+  --text-color: #{main.$text-color};
+  --text-inverted-color: #{main.$text-inverted-color};
 }
 
-// TODO: Esto no funciona
-.dark:root {
-  --primary-color: main.$dark-primary-color;
-  --primary-lighter-color: main.$dark-primary-lighter-color;
-  --text-color: main.$dark-text-color;
-  --text-inverted-color: main.$dark-text-inverted-color;
+:root.dark{
+  --primary-color: #{main.$dark-primary-color};
+  --primary-lighter-color: #{main.$dark-primary-lighter-color};
+  --primary-darker-color: #{main.$dark-primary-darker-color};
+  --primary-accent-color: #{main.$dark-primary-accent-color};
+  --text-color: #{main.$dark-text-color};
+  --text-inverted-color: #{main.$dark-text-inverted-color};
 }

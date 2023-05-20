@@ -1,16 +1,29 @@
+// Common
 $_white: #fff;
 $_black: #000;
-$_mountain-meadow: #23bb7c;
-$_aero-blue: #cbffea;
 
-$primary-color: $_mountain-meadow;
-$primary-lighter-color: $_aero-blue;
+$_jewel: #0e5135;
+$_elf-green: #0d9263;
+$_ocean-green: #4aba91;
+$_wattle: #d4ce46;
 
+$_dark-jewel: #0a3c28;
+$_dark-elf-green: #06633f;
+$_dark-ocean-green: #2d5a5f;
+$_dark-wattle: #9c8d31;
+
+// Light theme
+$primary-color: $_elf-green;
+$primary-lighter-color: $_ocean-green;
+$primary-darker-color: $_jewel;
+$primary-accent-color: $_wattle;
 $text-color: $_black;
 $text-inverted-color: $_white;
 
-$dark-primary-color: orange;
-$dark-primary-lighter-color: yellowgreen;
-
-$dark-text-color: $_white;
-$dark-text-inverted-color: $_black;
+// Dark theme palette
+$dark-primary-color:  $_dark-elf-green;
+$dark-primary-lighter-color:  $_dark-ocean-green;
+$dark-primary-darker-color:  $_dark-jewel;
+$dark-primary-accent-color:  $_dark-wattle;
+$dark-text-color:  $_white;
+$dark-text-inverted-color:  $_black;

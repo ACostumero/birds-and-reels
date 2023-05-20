@@ -52,14 +52,14 @@ $block: 'card';
     justify-content: space-between;
     width: 100%;
     box-sizing: border-box;
-    color: colors.$text-inverted-color;
+    color: var(--text-inverted-color);
     z-index: 1;
     &:before {
       content: '';
       position: absolute;
       width: 0;
       height: 70%;
-      background: colors.$primary-color;
+      background: var(--primary-color);
       transition: all .3s;
       z-index: -1;
     }

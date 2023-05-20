@@ -7,7 +7,7 @@ $block: 'card-mini-ui';
   align-items: center;
   border-radius: 8px;
   width: 180px;
-  background: colors.$primary-lighter-color;
+  background: var(--primary-lighter-color);
   cursor: pointer;
 
   &__wrapper {
@@ -17,7 +17,7 @@ $block: 'card-mini-ui';
     gap: 8px;
 
     &--title {
-      color: colors.$primary-color;
+      color: var(--primary-color);
     }
 
   }

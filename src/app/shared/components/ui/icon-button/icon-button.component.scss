@@ -31,7 +31,7 @@ $block: 'ui-icon-button';
       position: absolute;
       width: 100%;
       height: 100%;
-      background: colors.$primary-color;
+      background: var(--primary-color);
       opacity: .2;
       border-radius: 50%;
       z-index: 0;

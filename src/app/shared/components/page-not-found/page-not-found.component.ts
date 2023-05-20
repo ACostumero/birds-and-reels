@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { MOUNTAIN_MEADOW } from "@app-core/constants/theme.const";
 import { CATEGORY_ROUTES } from "@app-core/constants/navigation.const";
+import {ThemeService} from "@app-core/services/theme.service";
 
 @Component({
   selector: 'app-page-not-found',
@@ -8,8 +8,10 @@ import { CATEGORY_ROUTES } from "@app-core/constants/navigation.const";
   styleUrls: ['./page-not-found.component.scss']
 })
 export class PageNotFoundComponent {
+  constructor(private readonly _themeService: ThemeService) {
+  }
   public readonly TITLE: string = 'Page not found';
   public readonly ICON_NAME: string = 'fragmented-sword';
   public readonly CATEGORY_ROUTES = CATEGORY_ROUTES;
-  public readonly MOUNTAIN_MEADOW = MOUNTAIN_MEADOW;
+  public readonly primaryColor = this._themeService.getColor('primary-color');
 }

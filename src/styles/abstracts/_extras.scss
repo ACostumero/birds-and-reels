@@ -3,7 +3,7 @@
 .animated-title {
   position: relative;
   text-align: center;
-  color: colors.$text-inverted-color;
+  color: var(--text-inverted-color);
   transition: all .3s;
   &:after {
     content: '\00a0';
@@ -13,7 +13,7 @@
     width: 60vw;
     padding-block: 10px;
     transform: skew(40deg, 0) translate(-48%, -10px);
-    background: colors.$primary-color;
+    background: var(--primary-color);
     top: 0;
     left: 50%;
     z-index: -1;
