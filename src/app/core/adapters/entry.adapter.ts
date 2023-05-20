@@ -28,7 +28,7 @@ export class EntryAdapter implements Adapter<TEntry, Entry>{
   }
 
   adapt(entry: TEntry): Entry {
-    return this._getDecoratorByCategory[entry.category as CATEGORY](entry);
+    return this._getDecoratorByCategory[entry.category](entry);
   }
 
 }
